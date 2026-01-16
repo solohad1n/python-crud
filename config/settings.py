@@ -124,8 +124,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-if not DEBUG:
-    STATIC_ROOT = BASE_DIR / STATIC_URL
+STATIC_ROOT = BASE_DIR / STATIC_URL
 
 MEDIA_URL = 'media/'
 
