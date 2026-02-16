@@ -27,7 +27,9 @@ load_dotenv(BASE_DIR/'.env')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG') == 'True'
+# DEBUG = os.environ.get('DEBUG') == 'True'
+
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -88,7 +90,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-if not DEBUG:
+if not DEBUG or 1:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
